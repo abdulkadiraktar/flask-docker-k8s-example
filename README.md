@@ -224,22 +224,6 @@ spec:
 
 ---
 
-## Son Kontroller
-
-1. **Liveness Probe**  
-   - `deployment.yaml` içindeki `livenessProbe` ayarı, `/health` endpoint’ini düzenli aralıklarla kontrol ederek pod’un sağlığını izler. Yanıt alınamazsa pod yeniden başlatılır.
-
-2. **Docker Hub**  
-   - İmaj `mohitech/bc4m-app:v1` (örnek) adıyla paylaşıldıysa, `docker pull` ile hızlıca çekilebilir.
-
-3. **Git Repo**  
-   - Proje dosyaları (app.py, Dockerfile, deployment.yaml, service.yaml vb.) bu repo içinde yer almaktadır.
-
-4. **Test**  
-   - Lokal Python (`python app.py`)  
-   - Docker (`docker run -p 5000:5000 ...`)  
-   - Kubernetes (Minikube + NodePort)
-
 Herhangi bir soru veya sorunda iletişime geçebilirsiniz.
 
 **Teşekkürler ve iyi çalışmalar!**
