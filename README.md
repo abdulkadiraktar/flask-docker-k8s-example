@@ -225,5 +225,3 @@ spec:
 ---
 
 Herhangi bir soru veya sorunda iletişime geçebilirsiniz.
-
-**Teşekkürler ve iyi çalışmalar!**
