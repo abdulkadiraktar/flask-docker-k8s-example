@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bc4m-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bc4m
+  template:
+    metadata:
+      labels:
+        app: bc4m
+    spec:
+      containers:
+      - name: bc4m-container
+        image: mohitech/bc4m-app:v1
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 3
+          periodSeconds: 5
+          failureThreshold: 3
